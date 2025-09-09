@@ -16,99 +16,60 @@
 
 ### 🔹 Fuente de Datos
 
+- Archivos Excel descentralizados       
 
-┌─────────────────────────────────────────────────────────────┐
-
-│                  FUENTES DE DATOS (RAW INPUT)               │
-
-│  - Archivos Excel descentralizados                         │
-
-│  - Distintas entidades cargan sus propios formatos         │
-
-│  - Sin relaciones entre ellos                              │
-
-└─────────────────────────────────────────────────────────────┘
-
-```
+- Inversiones internas encontradas en la pagina del MEF
 
 ---
 
 ### 🔹 ETL / Ingesta Automatizada
 
-```
+- Validación de formato y columnas    
+- Extracción de datos relevantes    
 
-┌─────────────────────────────────────────────────────────────┐
-
-│                  ETL / INGESTA AUTOMATIZADA                 │
-
-│  - Validación de formato y columnas                         │
-
-│  - Extracción de datos relevantes                           │
-
-│  - Registro de metadatos de origen                          │
-
-└─────────────────────────────────────────────────────────────┘
-
-```
+- Registro de metadatos de origen 
 
 ---
 
 ### 🗄️ Almacenamiento
 
 **Plataforma elegida:** `Data Lakehouse`  
-*(Combina lo mejor de Data Lakes y Data Warehouses)*
 
 ---
 
 ### 🔸 Capa Medallion
 
 #### 🥉 BRONZE LAYER (Raw Layer)
-```
 
-┌─────────────────────────────────────────────────────────────┐
+- Datos crudos desde Excel (sin transformar)        
 
-│  - Datos crudos desde Excel (sin transformar)               │
+- Se conserva estructura original                   
 
-│  - Se conserva estructura original                          │
+ - Se almacenan logs de carga y errores         
 
-│  - Se almacenan logs de carga y errores                     │
 
-└─────────────────────────────────────────────────────────────┘
-
-```
 
 ⬇️
 
 #### 🥈 SILVER LAYER (Clean/Standardized)
-```
 
-┌─────────────────────────────────────────────────────────────┐
+ - Unión de archivos por campos clave (ID Proyecto, Fecha)
 
-│  - Unión de archivos por campos clave (ID Proyecto, Fecha) │
+- Estandarización de formatos (fechas, monedas, etc.)     
 
-│  - Estandarización de formatos (fechas, monedas, etc.)      │
+- Enriquecimiento con catálogos (región, entidad, etc.)   
 
-│  - Enriquecimiento con catálogos (región, entidad, etc.)    │
+- Eliminación de duplicados y validación de integridad    
 
-│  - Eliminación de duplicados y validación de integridad     │
-
-└─────────────────────────────────────────────────────────────┘
-
-```
 
 ⬇️
 
 #### 🥇 GOLD LAYER (Business / KPIs)
-```
 
-┌─────────────────────────────────────────────────────────────┐
-│  - Agregación de datos por KPI                              │
-│  - Indicadores por entidad, proyecto, región, estado        │
-│  - Tablas para dashboards y reportes automatizados          │
-│  - Estructura lista para análisis o exportación             │
-└─────────────────────────────────────────────────────────────┘
-
-```
+- Agregación de datos por KPI                         
+- Indicadores por entidad, proyecto, región, estado   
+- Tablas para dashboards y reportes automatizados        
+ - Estructura lista para análisis o exportación            
 
 ---
 
@@ -120,8 +81,3 @@
 ---
 
 > ✅ Este diseño permite escalar fácilmente hacia analítica avanzada, alertas tempranas y control automatizado de proyectos de inversión.
-```
-
----
-
-¿Quieres que también lo convierta a PDF o Word?
