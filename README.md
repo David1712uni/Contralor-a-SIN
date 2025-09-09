@@ -18,6 +18,7 @@
 
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │                  FUENTES DE DATOS (RAW INPUT)               │
 
 │  - Archivos Excel descentralizados                         │
@@ -37,10 +38,15 @@
 ```
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │                  ETL / INGESTA AUTOMATIZADA                 │
+
 │  - Validación de formato y columnas                         │
+
 │  - Extracción de datos relevantes                           │
+
 │  - Registro de metadatos de origen                          │
+
 └─────────────────────────────────────────────────────────────┘
 
 ```
@@ -60,9 +66,13 @@
 ```
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  - Datos crudos desde Excel (sin transformar)               │
+
 │  - Se conserva estructura original                          │
+
 │  - Se almacenan logs de carga y errores                     │
+
 └─────────────────────────────────────────────────────────────┘
 
 ```
@@ -73,10 +83,15 @@
 ```
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  - Unión de archivos por campos clave (ID Proyecto, Fecha) │
+
 │  - Estandarización de formatos (fechas, monedas, etc.)      │
+
 │  - Enriquecimiento con catálogos (región, entidad, etc.)    │
+
 │  - Eliminación de duplicados y validación de integridad     │
+
 └─────────────────────────────────────────────────────────────┘
 
 ```
