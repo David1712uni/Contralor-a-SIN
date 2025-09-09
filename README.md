@@ -1,8 +1,4 @@
-Claro, aquí tienes tu contenido en **formato Markdown** listo para copiar y usar en GitHub, Notion, Visual Studio Code u otra herramienta compatible:
 
----
-
-```markdown
 # 📊 Proyecto - Grupo 2
 
 ## 🏢 Detalles Generales
@@ -15,19 +11,21 @@ Claro, aquí tienes tu contenido en **formato Markdown** listo para copiar y usa
 - Carhuas Romero, Jhon Jesus  
 - Caruzo Cieza, David  
 
----
 
 ## 🏗️ Arquitectura Preliminar
 
 ### 🔹 Fuente de Datos
 
-```
 
 ┌─────────────────────────────────────────────────────────────┐
 │                  FUENTES DE DATOS (RAW INPUT)               │
+
 │  - Archivos Excel descentralizados                         │
+
 │  - Distintas entidades cargan sus propios formatos         │
+
 │  - Sin relaciones entre ellos                              │
+
 └─────────────────────────────────────────────────────────────┘
 
 ```
