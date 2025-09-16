@@ -10,8 +10,10 @@
 - Andrade Saavedra, Navhi Giordano  
 - Carhuas Romero, Jhon Jesus  
 - Caruzo Cieza, David  
-
-
+---
+## LABORATORIOS
+- (Laboratorio 1)[LABORATORIO1.docx]
+---
 ## 🏗️ Arquitectura Preliminar
 
 ### 🔹 Fuente de Datos
