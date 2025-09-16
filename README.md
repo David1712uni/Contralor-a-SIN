@@ -12,7 +12,7 @@
 - Caruzo Cieza, David  
 ---
 ## LABORATORIOS
-- !(Laboratorio 1)[LABORATORIO1.docx]
+- [Laboratorio 1](LABORATORIO1.docx)
 ---
 ## 🏗️ Arquitectura Preliminar
 
