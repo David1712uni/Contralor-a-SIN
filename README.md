@@ -4,7 +4,9 @@
 Este repositorio contiene el desarrollo del curso **Sistema de Inteligencia de Negocios (SI 807-U)**, ciclo 2025-B, en la Universidad Nacional de Ingeniería.
 
 ## Entregables
-[Archivo PC1](PracticaSI807Nro1-2025-B)
+### Práctica 1
+- [Archivo PC1](PracticaSI807Nro1-2025-B)
+- [PPT PC1](PC1-G2-PPT)
 
 ## 👥 Integrantes
 - **Navhi Andrade Saavedra** (20220008E)  
