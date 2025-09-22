@@ -47,4 +47,8 @@ El repositorio contiene:
 - Capturas de pantalla de Ambari con servicios activos.  
 - Ejecución de comandos (`hdfs dfs -ls /`, `spark-shell --version`).  
 - Proceso de subida de archivos CSV a HDFS.  
-- Diagrama de arquitectura inicial.  
+- Diagrama de arquitectura inicial.
+
+## 🏥 Arquitectura Inicial
+![](Arquitectura_Inicial.png)
+
