@@ -1,85 +1,48 @@
 
 # 📊 Proyecto - Grupo 2
 
-## 🏢 Detalles Generales
+Este repositorio contiene el desarrollo del curso **Sistema de Inteligencia de Negocios (SI 807-U)**, ciclo 2025-B, en la Universidad Nacional de Ingeniería.
 
-**Empresa**: Contraloría General de la República  
-**Área**: Subgerencia de Inversiones - Gestión de Proyectos  
+## Entregables
+[Archivo PC1](PracticaSI807Nro1-2025-B)
 
-**Integrantes del Grupo:**
-- Andrade Saavedra, Navhi Giordano  
-- Carhuas Romero, Jhon Jesus  
-- Caruzo Cieza, David  
----
-## LABORATORIOS
-- [Laboratorio 1](LABORATORIO1.docx)
----
-## 🏗️ Arquitectura Preliminar
+## 👥 Integrantes
+- **Navhi Andrade Saavedra** (20220008E)  
+- **David Caruzo Cieza** (20220122B)  
+- **Jhon Carhuas Romero** (20200298H)  
 
-### 🔹 Fuente de Datos
+## 🎯 Objetivos
+- Comprender el contexto estratégico de la empresa seleccionada (**EsSalud**).  
+- Identificar problemas de negocio y necesidades de información.  
+- Definir un set inicial de **10 KPI’s** alineados a la estrategia.  
+- Implementar la arquitectura base en **Hortonworks Sandbox** (VM VirtualBox).  
+- Entregar evidencia de un entorno **Hadoop & Spark** funcional.  
 
-- Archivos Excel descentralizados       
+## 📌 Alcance
+La práctica incluye:
+- Análisis organizacional de EsSalud (misión, visión, cadena de valor, procesos).  
+- Identificación de problemas críticos de negocio y necesidades de información.  
+- Diseño de indicadores (KPI’s) para la gestión y toma de decisiones.  
+- Instalación y validación de **Hortonworks** (Ambari, HDFS, Hive, Spark).  
+- Construcción de un **diagrama de arquitectura inicial**.  
+- Evidencia técnica documentada y explicada.  
 
-- Inversiones internas encontradas en la pagina del MEF
+## 🏥 Empresa seleccionada
+**Seguro Social de Salud (EsSalud, Perú)**  
+- Giro: Prestación de servicios de salud pública y aseguramiento social.  
+- Clientes: asegurados a nivel nacional.  
 
----
+## ⚙️ Entorno técnico
+- **Hortonworks Sandbox 2.6** en **VirtualBox**  
+- Acceso mediante **localhost** en el host principal  
+- Servicios habilitados:  
+  - HDFS (almacenamiento distribuido)  
+  - Hive (consultas SQL sobre Hadoop)  
+  - Spark (procesamiento en memoria)  
 
-### 🔹 ETL / Ingesta Automatizada
-
-- Validación de formato y columnas    
-- Extracción de datos relevantes    
-
-- Registro de metadatos de origen 
-
----
-
-### 🗄️ Almacenamiento
-
-**Plataforma elegida:** `Data Lakehouse`  
-
----
-
-### 🔸 Capa Medallion
-
-#### 🥉 BRONZE LAYER (Raw Layer)
-
-- Datos crudos desde Excel (sin transformar)        
-
-- Se conserva estructura original                   
-
- - Se almacenan logs de carga y errores         
-
-
-
-⬇️
-
-#### 🥈 SILVER LAYER (Clean/Standardized)
-
- - Unión de archivos por campos clave (ID Proyecto, Fecha)
-
-- Estandarización de formatos (fechas, monedas, etc.)     
-
-- Enriquecimiento con catálogos (región, entidad, etc.)   
-
-- Eliminación de duplicados y validación de integridad    
-
-
-⬇️
-
-#### 🥇 GOLD LAYER (Business / KPIs)
-
-- Agregación de datos por KPI                         
-- Indicadores por entidad, proyecto, región, estado   
-- Tablas para dashboards y reportes automatizados        
- - Estructura lista para análisis o exportación            
-
----
-
-## 📤 Consumo de Datos
-
-- **Power BI**: Para dashboards visuales, tableros de control y reportes mensuales.
-- **Aplicación Web (Node.js)**: Para consultas en tiempo real, alertas, gestión de indicadores y visualización de riesgos.
-
----
-
-> ✅ Este diseño permite escalar fácilmente hacia analítica avanzada, alertas tempranas y control automatizado de proyectos de inversión.
+## 🖼️ Evidencias
+El repositorio contiene:  
+- Capturas de pantalla de Ambari con servicios activos.  
+- Ejecución de comandos (`hdfs dfs -ls /`, `spark-shell --version`).  
+- Proceso de subida de archivos CSV a HDFS.  
+- Diagrama de arquitectura inicial.  
