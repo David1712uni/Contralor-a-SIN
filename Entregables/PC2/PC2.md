@@ -2,7 +2,7 @@
 # 📊 Práctica 2 - Grupo 2
 
 ## Entregables
-- [Archivo PC2](PC2-G2-Informe.pdf)
+- [Archivo PC2](PC2-G2-INFORME.pdf)
 - [PPT PC2](PC2-G2-PPT.pdf)
 - [Carpeta de Querys](Querys)
  
