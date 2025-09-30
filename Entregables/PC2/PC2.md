@@ -14,17 +14,6 @@
 - Construir el inventario de fuentes OLTP.  
 - Implementar la primera ingesta de datos en Hortonworks (HDFS y Hive).  
 
-## 📌 Alcance
-
-La práctica se centra en el análisis funcional y en el inicio de la implementación técnica:  
-
-- Levantamiento de preguntas de negocio.  
-- Definición de KPIs clave y sus fichas técnicas.  
-- Diseño de modelo conceptual (Star Schema).  
-- Inventario de fuentes de datos OLTP.  
-- Ingesta de datasets en HDFS y creación de tablas en Hive (zona raw).  
-- Consulta básica de control en Hive.  
-
 ## 1. Desarrollo
 
 ### 1.1 Preguntas del Negocio
