@@ -15,11 +15,12 @@ SSH_PORT = "2222"
 # === CREAR LISTA DE ARCHIVOS ===
 files = [
     "CIE10_2021.csv",
-    "Datos-planeamiento-estrategico.xlsx",
+    "Datos_planeamiento_estrategico.xlsx",
     "DF_ExLab_CExt_Diabetes.csv",
     "DF_ExLab_CExt_EnfermedadRenal.csv",
     "DF_ExLab_CExt_Hiperlipidemia.csv",
     "ipress.xls",
+    "geodir_ubigeo_inei.xls",
 ]
 
 
