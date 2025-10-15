@@ -1,8 +1,8 @@
 # 📊 Parcial - Grupo 2
 
 ## Entregables
-- [Archivo Parcial](G2_PARCIAL.pdf)
-- [PPT PC1](PARCIAL-G2-PPT.pdf)
+- [DOC Parcial](G2_PARCIAL.pdf)
+- [PPT PARCIAL](PARCIAL-G2-PPT.pdf)
 - [POWER BI](Parcial_G2.pbix)
 
 ## índice

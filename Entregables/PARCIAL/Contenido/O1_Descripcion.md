@@ -23,7 +23,7 @@ Su función principal es **brindar servicios de seguridad social en salud**, lo 
 La **sede principal** de EsSalud se encuentra en **Lima**, distrito de **Jesús María**.  
 Cuenta con una **red de establecimientos de salud distribuidos en todo el Perú**, con **cobertura nacional**.
 
-![](O1_1.png)
+<img src="O1_1.png" alt="Descripción" width="700" />
 
 En total, posee **cerca de 400 establecimientos** (hospitales generales, policlínicos, especializados) en diferentes regiones del país.  
 

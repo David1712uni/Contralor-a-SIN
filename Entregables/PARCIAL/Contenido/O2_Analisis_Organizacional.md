@@ -101,6 +101,7 @@ La **cadena de valor de EsSalud** representa cómo la institución organiza y ar
 
 ![](O2_3.png)
 
+
 Los procesos representan el **eje estructural** que articula la gestión institucional y permite alinear la estrategia con la prestación efectiva de servicios.  
 
 Se organizan en **tres niveles**:

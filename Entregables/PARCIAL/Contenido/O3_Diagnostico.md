@@ -85,11 +85,11 @@
 
 Para validar la viabilidad del enfoque de **anticipar demanda**, es necesario filtrar y verificar:
 
-- ✅ Existencia de historiales digitales de atenciones con granularidad diaria/horaria.  
-- ✅ Accesibilidad de datos de ocupación, egresos, rotación y tiempos de estancia.  
-- ✅ Existencia de algoritmos de predicción previos.
-- ✅ Presupuesto disponible para capacidad ociosa mínima.  
-- ✅ Viabilidad organizativa, legal y técnica para integrar sistemas hospitalarios.  
+- Existencia de historiales digitales de atenciones con granularidad diaria/horaria.  
+- Accesibilidad de datos de ocupación, egresos, rotación y tiempos de estancia.  
+- Existencia de algoritmos de predicción previos.
+- Presupuesto disponible para capacidad ociosa mínima.  
+- Viabilidad organizativa, legal y técnica para integrar sistemas hospitalarios.  
 
 Solo los problemas que superen este filtro (disponen de datos, control institucional y margen de acción) se pasarán a formulación **SMART**.
 

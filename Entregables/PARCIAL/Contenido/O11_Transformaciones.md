@@ -7,19 +7,24 @@
 Se cargaron las siguientes fuentes de datos para la conformación del modelo analítico:
 
 - **CIE10_2021.csv**  
-![](O11_1.png)
+
+<img src="O11_1.png" alt="Descripción" width="500" /> 
 
 - **DF_ExLab_CExt_Diabetes.csv**
-![](O11_2.png)
-- **DF_ExLab_CExt_EnfermedadRenal.csv**  
-![](O11_3.png)
 
-- **DF_ExLab_CExt_Hiperlipidemia.csv**  
-![](O11_4.png)
+<img src="O11_2.png" alt="Descripción" width="500" /> 
+
+- **DF_ExLab_CExt_EnfermedadRenal.csv**  
+
+<img src="O11_3.png" alt="Descripción" width="500" /> 
+
+- **DF_ExLab_CExt_Hiperlipidemia.csv** 
+
+<img src="O11_4.png" alt="Descripción" width="500" /> 
 
 - **geodir_ubigeo_inei_ubigeo_inei.csv**
 
-![](O11_5.png)
+<img src="O11_5.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -36,7 +41,8 @@ df_CIE = df_CIE.withColumnRenamed("CODIGO", "cod_enfermedad") \
 .withColumnRenamed("DESCRIPCION", "des_enfermedad")
 ```
 **Resultado:**  
-![](O11_6.png)
+
+<img src="O11_6.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -162,25 +168,27 @@ df_Paciente = df_Diabetes.select(
 ).distinct()
 ```
 **Resultado final:**
+
 - df_Diabetes  
 
-![](O11_20.png)
+<img src="O11_20.png" alt="Descripción" width="500" /> 
 
 - df_Procedimiento  
 
-![](O11_7.png)
+<img src="O11_7.png" alt="Descripción" width="500" /> 
 
 - df_Resultado_Diagnostico 
 
-![](O11_8.png)
+<img src="O11_8.png" alt="Descripción" width="500" /> 
 
 - df_Medico  
 
-![](O11_9.png)
+<img src="O11_9.png" alt="Descripción" width="500" /> 
 
 - df_Paciente  
 
-![](O11_10.png)
+<img src="O11_10.png" alt="Descripción" width="500" /> 
+
 ---
 
 #### c) df_Enf_Renal
@@ -215,7 +223,8 @@ df_Renal_main = df_Renal_main.withColumn(
 )
 ```
 **Resultado:**
-![](O11_11.png)
+
+<img src="O11_11.png" alt="Descripción" width="500" /> 
 ---
 
 #### d) df_Hiperlipidemia
@@ -250,7 +259,8 @@ df_Hiperlipidemia_main = df_Hiperlipidemia_main.withColumn(
 ```
 
 **Resultado:**
-![](O11_12.png)
+
+<img src="O11_12.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -267,7 +277,7 @@ df_Geodir = df_Geodir.select(
 )
 ```
 **Resultado:**
-![](O11_13.png)
+<img src="O11_13.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -285,7 +295,7 @@ df_diagnostico = (
 )
 ```
 
-![](O11_14.png)
+<img src="O11_14.png" alt="Descripción" width="500" /> 
 
 - Pacientes
 
@@ -299,7 +309,7 @@ df_Paciente_final = (
 )
 ```
 
-![](O11_15.png)
+<img src="O11_15.png" alt="Descripción" width="500" /> 
 
 * Se agrega grupo etario
 
@@ -317,7 +327,7 @@ df_paciente = df_paciente.withColumn(
 )
 ```
 
-![](O11_16.png)
+<img src="O11_16.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -341,7 +351,7 @@ df_CIE.coalesce(1).write.mode("overwrite").option("header", "true").csv(output_p
 
 **Resultado:**  
 
-![](O11_17.png)
+<img src="O11_17.png" alt="Descripción" width="500" /> 
 
 ---
 
@@ -367,11 +377,11 @@ df_parquet.write.mode("overwrite") \
 **Particiones de datos:**
 - Por año
 
-![](O11_18.png)
+<img src="O11_18.png" alt="Descripción" width="700" /> 
 
 - Por mes
 
-![](O11_19.png)
+<img src="O11_19.png" alt="Descripción" width="700" /> 
 
 
 ---

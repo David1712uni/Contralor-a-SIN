@@ -18,7 +18,7 @@ Código:
 mkdir $env:USERPROFILE\.ssh  
 ```
 Ejecución:  
-![](O10_1.png) 
+<img src="O10_1.png" alt="Descripción" width="400" /> 
 
 ---
 
@@ -29,7 +29,7 @@ ssh-keygen -t rsa -b 4096 -f $env:USERPROFILE\.ssh\horton_id_rsa
 ```
 
 Ejecución:  
-![](O10_2.png)  
+<img src="O10_2.png" alt="Descripción" width="400" />  
 
 ---
 
@@ -40,7 +40,7 @@ ls $env:USERPROFILE\.ssh
 ```
 
 Ejecución:  
-![](O10_3.png) 
+<img src="O10_3.png" alt="Descripción" width="400" /> 
 
 Donde:  
 - horton_id_rsa corresponde a la llave privada, almacenada localmente.  
@@ -55,7 +55,7 @@ ip a
 ```
 
 Ejecución:  
-![](O10_4.png) 
+<img src="O10_4.png" alt="Descripción" width="400" /> 
 
 ---
 
@@ -66,7 +66,7 @@ ssh -p 2222 root@127.0.0.1
 ```
 
 Ejecución:  
-![](O10_5.png)
+<img src="O10_5.png" alt="Descripción" width="400" />
 
 ---
 
@@ -75,12 +75,12 @@ Código:
 ```bash  
 mkdir -p ~/.ssh  
 cat /root/horton_id_rsa.pub >> ~/.ssh/authorized_keys  
-chmod 700 ~/.ssh  
+chmod 400 ~/.ssh  
 chmod 600 ~/.ssh/authorized_keys  
 ```
 
 Ejecución:  
-![](O10_6.png)  
+<img src="O10_6.png" alt="Descripción" width="400" />  
 
 ---
 
