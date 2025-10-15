@@ -4,6 +4,10 @@
 Este repositorio contiene el desarrollo del curso **Sistema de Inteligencia de Negocios (SI 807-U)**, ciclo 2025-B, en la Universidad Nacional de Ingeniería.
 
 ## Entregables
+
+### Parcial
+- [Parcial](Entregables/PARCIAL/PARCIAL.md)
+
 ### Práctica 1
 - [Página PC1](Entregables/PC1/PC1.md)
 
