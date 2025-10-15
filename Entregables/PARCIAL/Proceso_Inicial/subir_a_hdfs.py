@@ -5,7 +5,7 @@ import subprocess
 import pandas as pd
 
 # === CONFIGURACIÓN ===
-KEY_PATH = r"C:\Users\Lenovo\.ssh\horton_id_rsa"
+KEY_PATH = r"C:\Users\giord\.ssh\horton_id_rsa"
 LOCAL_DIR = r"C:\Inteligencia_Negocios\Archivos\Descargados"
 REMOTE_DIR = "/root/hdfs_upload"
 HDFS_DIR = "/data/raw/"
@@ -20,7 +20,7 @@ files = [
     "DF_ExLab_CExt_EnfermedadRenal.csv",
     "DF_ExLab_CExt_Hiperlipidemia.csv",
     "ipress.xls",
-    "geodir_ubigeo_inei.xls",
+    "geodir_ubigeo_inei.xlsx",
 ]
 
 

@@ -14,7 +14,7 @@ mkdir $env:USERPROFILE\.ssh
 
 2. Creamos las llaves de conección
 ```bash
-ssh-keygen -t rsa -b 4096 -f $env:USERPROFILE\ssh\horton_id_rsa
+ssh-keygen -t rsa -b 4096 -f $env:USERPROFILE\.ssh\horton_id_rsa
 ```
 
 <img src="Generacion_clave2.png" alt="Descripción" width="500" />
