@@ -24,14 +24,14 @@
 
 | Tabla | Descripción | Clave primaria | Relaciones |
 |--------|--------------|----------------|-------------|
-| **Dim_Enfermedad (df_CIE)** | Catálogo CIE10 de enfermedades | `cod_enfermedad` | ↔ Diagnóstico |
-| **Dim_Paciente (df_Paciente_final)** | Pacientes únicos | `id_paciente` | ↔ Diagnóstico |
-| **Dim_Medico (df_Medico_final)** | Médicos únicos | `id_medico` | ↔ Diagnóstico |
-| **Dim_Procedimiento (df_Procedimiento)** | Catálogo de exámenes y procedimientos | `cod_procedimiento` | ↔ Resultado_Procedimiento |
-| **Dim_IPRESS (df_Ipress)** | Establecimientos de salud | `cod_institucion` | ↔ Diagnóstico |
-| **Dim_Ubigeo (df_Geodir)** | Ubicación geográfica (departamento, provincia, distrito) | `ubigeo` | ↔ IPRESS, Diagnóstico |
-| **Fact_Diagnostico (df_diagnostico)** | Registro principal de atención médica | `cod_diagnostico` | ↔ Todas las dimensiones |
-| **Fact_Resultado_Procedimiento (df_Resultado_Procedimiento)** | Resultados de laboratorio | `(cod_diagnostico, cod_procedimiento)` | ↔ Diagnóstico y Procedimiento |
+| **Dim_Enfermedad (df_CIE)** | Catálogo CIE10 de enfermedades | `cod_enfermedad` |Diagnóstico |
+| **Dim_Paciente (df_Paciente_final)** | Pacientes únicos | `id_paciente` |Diagnóstico |
+| **Dim_Medico (df_Medico_final)** | Médicos únicos | `id_medico` |Diagnóstico |
+| **Dim_Procedimiento (df_Procedimiento)** | Catálogo de exámenes y procedimientos | `cod_procedimiento` |Resultado_Procedimiento |
+| **Dim_IPRESS (df_Ipress)** | Establecimientos de salud | `cod_institucion` |Diagnóstico |
+| **Dim_Ubigeo (df_Geodir)** | Ubicación geográfica (departamento, provincia, distrito) | `ubigeo` |IPRESS, Diagnóstico |
+| **Fact_Diagnostico (df_diagnostico)** | Registro principal de atención médica | `cod_diagnostico` |Todas las dimensiones |
+| **Fact_Resultado_Procedimiento (df_Resultado_Procedimiento)** | Resultados de laboratorio | `(cod_diagnostico, cod_procedimiento)` |Diagnóstico y Procedimiento |
 
 ---
 
@@ -217,5 +217,33 @@ Estructura dedicada a registros rechazados sin interrumpir el flujo ETL.
 ├── procedimiento_error/
 ```
 
+**Columnas de DLQ:**
 
+| Campo             | Descripción                 |
+| ----------------- | --------------------------- |
+| registro_original | JSON del registro rechazado |
+| error_tipo        | Descripción del error       |
+| fecha_registro    | Fecha y hora del evento     |
 
+### 4. Política de reintentos
+
+* Automático: job programado que reintenta carga de registros corregidos.
+
+* Manual: revisión del log /user/hive/warehouse/logs/etl_errors.log.
+
+Ejemplo:
+
+```python
+df_retry = spark.read.parquet("/user/hive/warehouse/errors/fact_diagnostico_error")
+df_retry_clean = df_retry.filter(df_retry["resultado"].isNotNull())
+df_retry_clean.write.mode("append").parquet("/user/hive/warehouse/curated/fact_diagnostico")
+```
+
+### 5. Beneficios del enfoque DLQ
+
+| Aspecto                        | Beneficio                                                    |
+| ------------------------------ | ------------------------------------------------------------ |
+| **Trazabilidad**               | Cada error queda registrado con su causa                     |
+| **Disponibilidad**             | El flujo ETL no se interrumpe ante errores individuales      |
+| **Calidad de datos**           | Registros defectuosos se aíslan y corrigen                   |
+| **Reprocesamiento controlado** | Permite reincorporar datos válidos sin repetir toda la carga |
