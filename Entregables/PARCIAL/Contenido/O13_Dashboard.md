@@ -46,7 +46,9 @@ Cada una de estas medidas fue creada mediante el editor DAX (Data Analysis Expre
 
 En esta sección se presentan las **capturas del dashboard** desarrollado, mostrando la disposición de gráficos, indicadores y filtros principales.  
 
-<img src="O13_7.png" alt="Descripción" width="800" /> 
+<img src="O13_7.png" alt="Descripción 1" width="800" /> 
+
+<img src="O13_8.png" alt="Descripción 2" width="800" /> 
 
 El archivo es: 
 **[Archivo de Power BI](https://drive.google.com/file/d/1iCQBayL-tl1GVPi9qSzdq5yYEUjs1k18/view?usp=drive_link)**
